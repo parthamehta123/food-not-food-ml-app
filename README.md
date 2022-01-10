@@ -8,7 +8,7 @@ Machine Learning powered app to decide whether a photo is food or not.
 * Fix output predict probability
 * Make way to say whether model was correct or not (log this somewhere)
 
-See notes on Notion: https://www.notion.so/mrdbourke/November-6-100k-Livestream-Celebration-a6ed0836c7a9490f94ada8891e606d8e
+See notes on Notion: https://www.notion.so/Building-foodnotfood-app-4c1c4b5551a14b3facf0845220bdfd1e
 
 What we're building (except for food not food):
 
