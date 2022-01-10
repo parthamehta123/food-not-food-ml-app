@@ -63,12 +63,9 @@ if not os.path.exists("*/101_food_classes_all_data.zip"):
         zip_path = "101_food_classes_all_data.zip"
         print(f"[INFO] Downloading Food101 data...")
         download(
-            url="https://storage.googleapis.com/ztm_tf_course/food_vision/101_food_classes_all_data.zip",
+            url="https://storage.googleapis.com/food-notfood-vision-model-playground/101_food_classes_all_data.zip",
             filename=zip_path,
         )
-        # requests.get(
-        #     "https://storage.googleapis.com/ztm_tf_course/food_vision/101_food_classes_all_data.zip"
-        # )
         print(f"[INFO] Food101 downloaded, unzipping...")
         unzip_data(zip_path)
         print(f"[INFO] Data unzipped, moving to data directory...")

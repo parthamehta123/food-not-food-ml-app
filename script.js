@@ -3,6 +3,8 @@ const classes = {
   1: "Not Food",
 };
 
+model_status = ""
+
 // Check to see if TF.js is available
 const tfjs_status = document.getElementById("tfjs_status");
 
@@ -15,7 +17,8 @@ let model; // This is in global scope
 const loadModel = async () => {
   try {
     const tfliteModel = await tflite.loadTFLiteModel(
-      "models/food_not_food_model_v5.tflite"
+      "models/food_not_food_model_v3.tflite"
+      //"https://storage.googleapis.com/food-notfood-vision-model-playground/food_not_food_model_v3.tflite"
     );
     model = tfliteModel; // assigning it to the global scope model as tfliteModel can only be used within this scope
     // console.log(tfliteModel);
@@ -47,7 +50,7 @@ function classifyImage(model, image) {
   // console.log(model);
 
   // console.log(tflite.getDTypeFromTFLiteType("uint8")); // Gives int32 as output thus we cast int32 in below line
-  // console.log(tflite.getDTypeFromTFLiteType("uint8"));
+  console.log(tflite.getDTypeFromTFLiteType("uint8"));
   console.log("converting image to different datatype...");
   image = tf.cast(image, "int32"); // Model requires uint8
   console.log("model about to predict...");
